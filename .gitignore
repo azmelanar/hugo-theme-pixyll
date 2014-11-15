@@ -2,3 +2,5 @@
 
 hugo
 public/*
+content/*
+config.*
