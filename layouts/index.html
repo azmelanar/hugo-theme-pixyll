@@ -6,7 +6,7 @@
     <div class="measure">
       <div class="home">
         <div class="posts">
-          {{ range first 5 .Data.Pages }}
+          {{ range .Data.Pages }}
             {{ if eq .Type "post" }}
               {{ .Render "summary"}}
             {{ end }}
