@@ -5,6 +5,7 @@ title = "Hello, Hugo!"
 slug = "hello"
 tags = [ "" ]
 categories = [ "" ]
+author = "admin"
 
 +++
 
