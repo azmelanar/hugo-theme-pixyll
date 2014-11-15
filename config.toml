@@ -1,0 +1,12 @@
+languageCode = "en-us"
+contentdir = "content"
+publishdir = "public"
+builddrafts = false
+baseUrl = ""
+canonifyurls = true
+title = "Pixyll"
+author = "admin"
+
+[indexes]
+  category = "categories"
+  tag = "tags"
