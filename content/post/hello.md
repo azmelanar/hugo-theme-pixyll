@@ -3,7 +3,7 @@ date = "2014-11-08T18:30:03+04:00"
 draft = false
 title = "Hello, Hugo!"
 slug = "hello"
-tags = [ "" ]
+tags = [ "sysadmin" ]
 categories = [ "" ]
 author = "admin"
 
