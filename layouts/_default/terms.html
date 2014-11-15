@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+<div class="site-wrap">
+  {{ partial "header.html" . }}
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+
+  <div>
+   <h3 id="title">{{ .Title }}</h3>
+   {{ $data := .Data }}
+    {{ range $key,$value := .Data.Terms.ByCount }}
+    <a href="{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} <br>
+    {{ end }}
+  </div>
+
+  </div>
+</div>
+{{ partial "footer.html" . }}
