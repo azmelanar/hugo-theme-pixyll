@@ -14,7 +14,7 @@
 */
 
 body {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "Ubuntu", "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 html, body {
@@ -391,12 +391,12 @@ h6,
 @media screen and (min-width: 64em) {
   .h1,
   h1 {
-    font-size: 4.498rem;
+    font-size: 3.5rem;
   }
 
   .h2,
   h2 {
-    font-size: 3.18rem;
+    font-size: 3rem;
   }
 
   .h3,
@@ -467,8 +467,8 @@ Licensed under the MIT license - http://opensource.org/license/MIT
     -ms-transition: all .3s;
 }
 
-.icons a.rss { background: url(/images/icons/rss.png) left top no-repeat; }
-.icons a.twitter { background: url(/images/icons/twitter.png) left top no-repeat; }
+.icons a.rss { background: url(images/icons/rss.png) left top no-repeat; }
+.icons a.twitter { background: url(images/icons/twitter.png) left top no-repeat; }
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -529,4 +529,67 @@ Copyright (c) 2014 Daniel Eden
 .fade-in-down {
   -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
+}
+/* Pagination */
+.paginatin_area{
+  margin: 0;
+  overflow: hidden;
+  padding: 4px 0 94px;
+  text-align: center;
+}
+.paginatin_area ul{
+  display: inline-block;
+  list-style: none outside none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+}
+.paginatin_area ul li{
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.paginatin_area ul li a{
+  background: none repeat scroll 0 0 #262626;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-family: lato;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17px;
+  margin: 2px;
+  min-height: 30px;
+  min-width: 30px;
+  padding: 6px;
+  text-decoration: none;
+  -moz-transition:all .4s;
+  -webkit-transition:all .4s;
+  -ms-transition:all .4s;
+  -o-transition:all .4s;
+  transition:all .4s;
+}
+.paginatin_area ul li.active a{
+  background:#b3b3b1;
+}
+.paginatin_area ul li.active a:hover{
+  background:#b3b3b1;
+}
+.paginatin_area ul li a:hover{
+  background:#37C392;
+}
+.paginatin_area ul li a i{}
+.p_arrow{}
+.p_arrow i{
+  display: block;
+  font-family: lato;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
