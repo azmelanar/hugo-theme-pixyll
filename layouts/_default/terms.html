@@ -7,8 +7,9 @@
   <div>
    <h3 id="title">{{ .Title }}</h3>
    {{ $data := .Data }}
+   {{ $baseurl := .Site.BaseUrl }}
     {{ range $key,$value := .Data.Terms.ByCount }}
-    <a href="{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} <br>
+    <a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} <br>
     {{ end }}
   </div>
 
