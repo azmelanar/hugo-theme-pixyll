@@ -1,1 +1,11 @@
-<p>Comments!</p>
+<p class="post-meta">Comments</p>
+<div id="disqus_thread">
+<script type="text/javascript">
+   var disqus_identifier = "{{ .RelPermalink }}";
+   (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//{{ .Site.Params.DisqusUrl }}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+</div>
