@@ -6,13 +6,34 @@
 
   <div>
    <h3 id="title">{{ .Title }}</h3>
-   {{ $data := .Data }}
    {{ $baseurl := .Site.BaseUrl }}
+   {{ if eq .Url "/search/" }}
+<link rel="stylesheet" type="text/css" href="{{ $baseurl }}/tipuesearch/tipuesearch.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{ $baseurl }}/tipuesearch/tipuesearch_set.js"></script>
+<script type="text/javascript" src="{{ $baseurl }}/tipuesearch/tipuesearch.min.js"></script>
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({
+         'mode' : 'json',
+         'show': 10,
+         'newWindow': true,
+         'contentLocation': '{{ $baseurl }}/tipuesearch_content.json'
+     });
+});
+</script>
+    <div class="span8 offset2">
+        <div id="tipue_search_content"><div id="tipue_search_loading"></div></div>
+    </div>
+   {{ else }}
+   {{ $data := .Data }}
     {{ range $key,$value := .Data.Terms.ByCount }}
     <a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} <br>
     {{ end }}
+    {{ end }}
   </div>
 
+    </div>
   </div>
 </div>
 {{ partial "footer.html" . }}

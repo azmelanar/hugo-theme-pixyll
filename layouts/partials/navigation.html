@@ -1,3 +1,7 @@
 <a href="/about/">About</a>
 <a href="/tags">Tags</a>
 <a href="/contact/">Contact</a>
+<form class="navbar-search" action="{{ .Site.BaseUrl }}/search/"
+    onsubmit="return validateForm(this.elements['q'].value);">
+    <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input">
+</form>
