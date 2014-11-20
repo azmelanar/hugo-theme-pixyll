@@ -6,7 +6,7 @@
     <div class="measure">
       <div class="home">
         <div class="posts">
-          {{ range first 20 .Data.Pages.ByDate.Reverse }}
+          {{ range first 10 .Data.Pages.ByDate.Reverse }}
             {{ if eq .Type "post" }}
               {{ .Render "summary"}}
             {{ end }}
