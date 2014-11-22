@@ -7,16 +7,18 @@
         <h1 class="py2">{{ .Title }}</h1>
         <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}</span><br>
         {{ $baseurl := .Site.BaseUrl }}
-        <p id="tags">Tags:&nbsp;
-        {{ range $i, $e := .Params.tags }}
-            {{if $i}},&nbsp;{{end}}
-            <a href="{{ $baseurl }}/tags/{{ . }}">{{ . }}</a>
-        {{ end }}</p>
       </div>
 
       <article class="post-content">
       {{ .Content }}
       </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        {{ range $i, $e := .Params.tags }}
+            {{if $i}},&nbsp;{{end}}
+            <a href="{{ $baseurl }}/tags/{{ . }}">{{ . }}</a>
+        {{ end }}
+      </p>
 
       {{ partial "comments.html" . }}
     </div>

@@ -7,7 +7,7 @@
   <p class="post-summary">{{ .Summary }}</p>
   </a>
   {{ $baseurl := .Site.BaseUrl }}
-  <p style="color: #000;">Tags:&nbsp;
+  <p class="post-meta">Tags:&nbsp;
   {{ range $i, $e := .Params.tags }}
       {{if $i}},&nbsp;{{end}}
       <a href="{{ $baseurl }}/tags/{{ . }}">{{ . }}</a>
