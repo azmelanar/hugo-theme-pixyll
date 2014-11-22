@@ -5,26 +5,32 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 
 ## Features
 
-- Disqus comments supported.
-  Add DisqusUrl parameter to Site params in config.
-- Basic tag support. Add tag = "tags" to Site indexes in config.
+- Basic tag support;
+- Disqus comments supported;
+- Google Analytics supported;
+- Social links (currently only for twitter).
 
-Example config
+Example config:
+
 ```toml
 languageCode = "en-us"
 contentdir = "content"
 publishdir = "public"
 builddrafts = false
-baseUrl = "http://localhost"
+baseUrl = ""
 canonifyurls = true
 title = "Pixyll"
 author = "admin"
+theme = "pixyll"
 
 [indexes]
   category = "categories"
   tag = "tags"
 
 [params]
-  DisqusUrl = "pixyll"
+  search_engine = true
+  google_analytics_id = "XX-XXXXXXXX-X"
+  twitter_username = "username"
+  disqus_shortname = "sitename"
 ```
 

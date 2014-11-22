@@ -10,3 +10,9 @@ author = "admin"
 [indexes]
   category = "categories"
   tag = "tags"
+
+[params]
+  #search_engine = true
+  #google_analytics_id = ""
+  #twitter_username = ""
+  #disqus_shortname = ""
