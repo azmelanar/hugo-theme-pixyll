@@ -1,4 +1,6 @@
 <nav class="social-icons icons">
 <a class="fa fa-rss rss" href="/index.xml"></a>
-<a class="fa fa-twitter twitter" href="https://twitter.com/{{ .Site.Params.twitter }}"></a>
+{{ if isset .Site.Params "twitter_username" }}
+<a class="fa fa-twitter twitter" href="https://twitter.com/{{ .Site.Params.twitter_username }}"></a>
+{{ end }}
 </nav>
