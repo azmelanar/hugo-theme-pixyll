@@ -9,6 +9,7 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 - Disqus comments supported;
 - Google Analytics supported;
 - Social links (currently only for twitter).
+- [Formspree](http://formspree.io/) for contanct form.
 
 Example config:
 
