@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ .Site.Title }} | {{ .Title }}</title>
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -11,15 +11,20 @@
   <link rel="canonical" href="{{ .Permalink }}">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/basscss.css">
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/main.css">
+  <!-- Those css minifined and combined together. See combined-min.css below
+  <link rel="stylesheet" type="text/css" href="/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
 
   <!-- Highlight -->
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/highlight/styles/railscasts.css">
+  <!-- Also minified and combined into combined-min.css
+  <link rel="stylesheet" type="text/css" href="/css/highlight/styles/railscasts.css"> -->
 
   <!-- Fonts -->
+  <!-- Combined and minified
   <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic'>
-  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato:900,300'>
+  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato:900,300'> -->
+
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/combined-min.css">
 
 </head>
 <body class="">
