@@ -1,3 +1,4 @@
+{{ if isset .Site.Params "disqus_shortname" }}
 <div id="disqus_thread">
   <script type="text/javascript">
      var disqus_shortname = "{{ .Site.Params.disqus_shortname }}";
@@ -10,3 +11,4 @@
      })();
   </script>
 </div>
+{{ end }}
