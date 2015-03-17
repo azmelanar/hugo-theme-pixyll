@@ -1,32 +1,34 @@
 {{ partial "head.html" . }}
 <div class="site-wrap">
-  {{ partial "header.html" . }}
-
-  {{ if isset .Site.Params "description" }}
-  <meta name="description" content="{{ .Site.Params.description }}">
-  {{ end }}
-  <div class="post p2 p-responsive wrap" role="main">
-    <div class="measure">
-      <div class="home">
-        <div class="posts">
-          {{ range first 10 .Data.Pages.ByDate.Reverse }}
-            {{ if eq .Type "post" }}
-              {{ .Render "summary"}}
-            {{ end }}
-          {{ end }}
-<!-- No pagination by Hugo yet
-        <div class="paginatin_area">
-            <ul>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#"  class="p_arrow"><i>&rarr;</i></a></li>
-            </ul>
-          </div>
--->
+    {{ partial "header.html" . }}
+    {{ if isset .Site.Params "description" }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{ end }}
+    <div class="post p2 p-responsive wrap" role="main">
+        <div class="measure">
+            <div class="home">
+                <div class="posts">
+                    {{ if isset .Site.Params "paginate" }}
+                        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+                        {{ range (.Paginate ( first 10 .Data.Pages.ByDate.Reverse )).Pages }}
+                            {{ .Render "summary"}}
+                        {{ end }}
+                </div>
+            </div>
+            <div class="paginatin_area">
+                        {{ partial "pagination.html" . }}
+                <!--            {{ template "_internal/pagination.html" . }} -->
+            </div>
+                    {{ else }}
+                        {{ range first 10 .Data.Pages.ByDate.Reverse }}
+                            {{ if eq .Type "post" }}
+                                {{ .Render "summary"}}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 {{ partial "footer.html" . }}

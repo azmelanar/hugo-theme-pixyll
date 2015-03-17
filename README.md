@@ -10,6 +10,7 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 - Google Analytics supported.
 - Social links (currently only for twitter).
 - [Formspree](http://formspree.io/) for contanct form.
+- Pagination support.
 
 Example config:
 
@@ -33,5 +34,6 @@ theme = "pixyll"
   google_analytics_id = "XX-XXXXXXXX-X"
   twitter_username = "username"
   disqus_shortname = "sitename"
+  paginate = true
 ```
 
