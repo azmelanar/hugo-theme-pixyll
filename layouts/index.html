@@ -10,8 +10,8 @@
                 <div class="posts">
                     {{ if isset .Site.Params "paginate" }}
                         {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-                        {{ range (.Paginate ( first 10 .Data.Pages.ByDate.Reverse )).Pages }}
-                            {{ .Render "summary"}}
+                        {{ range $paginator.Pages.ByDate.Reverse }}
+                            {{ .Render "summary" }}
                         {{ end }}
                 </div>
             </div>
