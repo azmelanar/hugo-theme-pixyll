@@ -5,8 +5,8 @@
     <div class="measure">
 
   <div>
-   {{ $baseurl := .Site.BaseUrl }}
-   {{ if eq .Url "/search/" }}
+   {{ $baseurl := .Site.BaseURL }}
+   {{ if eq .URL "/search/" }}
 <link rel="stylesheet" type="text/css" href="{{ $baseurl }}/tipuesearch/tipuesearch.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="{{ $baseurl }}/tipuesearch/tipuesearch_set.js"></script>

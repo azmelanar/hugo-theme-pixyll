@@ -4,3 +4,4 @@ license = "MIT"
 name = "hugo-theme-pixyll"
 source_repo = "https://github.com/azmelanar/hugo-theme-pixyll"
 tags = ["blog", "personal"]
+min_version = 0.14

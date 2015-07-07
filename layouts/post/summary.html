@@ -6,7 +6,7 @@
   <h3 class="h2 post-title">{{ .Title }} {{ if .Draft }}(draft){{end}}</h3>
   <p class="post-summary">{{ .Summary }}</p>
   </a>
-  {{ $baseurl := .Site.BaseUrl }}
+  {{ $baseurl := .Site.BaseURL }}
   <p class="post-meta">Tags:&nbsp;
   {{ range $i, $e := .Params.tags }}
       {{if $i}},&nbsp;{{end}}
