@@ -37,4 +37,4 @@ theme = "pixyll"
   paginate = true
 ```
 
-![Pixyll Screenshot](https://raw.githubusercontent.com/azmelanar/hugo-theme-pixyll/master/images/top.png)
+![Pixyll Screenshot](https://raw.githubusercontent.com/azmelanar/hugo-theme-pixyll/master/images/tn.png)
