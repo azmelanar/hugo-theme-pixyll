@@ -18,6 +18,9 @@ DefaultContentLanguage = "en"
 [Languages.en]
 weight = 1
 
+[Languages.ru]
+weight = 2
+
 [indexes]
   category = "categories"
   tag = "tags"
