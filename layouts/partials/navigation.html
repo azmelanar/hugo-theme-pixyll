@@ -1,6 +1,13 @@
 <a href="/about/">About</a>
 <a href="/tags">Tags</a>
 <a href="/contact/">Contact</a>
+{{- if .Site.IsMultiLingual -}}
+{{- range $lang := .Site.Languages -}}
+{{- if ne $.Site.Language $lang -}}
+<a href="/{{ $lang }}">{{ $lang }}</a>
+{{- end -}}
+{{- end -}}
+{{- end -}}
 {{ if isset .Site.Params "search_engine" }}
 <form class="navbar-search" action="{{ .Site.BaseURL }}/search/index.html"
     onsubmit="return validateForm(this.elements['q'].value);">
