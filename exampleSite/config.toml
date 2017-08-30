@@ -1,11 +1,22 @@
-languageCode = "en-us"
-contentdir = "content"
-publishdir = "public"
-builddrafts = false
-baseUrl = ""
-canonifyurls = true
-title = "Pixyll"
-author = "admin"
+archetypeDir           = "archetypes"
+author                 = "admin"
+baseUrl                = "/"
+buildDrafts            = false
+relativeURLs           = true
+canonifyUrls           = true
+contentDir             = "content"
+languageCode           = "en-us"
+layoutDir              = "layouts"
+publishDir             = "public"
+theme                  = "hugo-theme-pixyll"
+themesDir              = "../.."
+title                  = "Pixyll"
+enableEmoji            = true
+DefaultContentLanguage = "en"
+
+[Languages]
+[Languages.en]
+weight = 1
 
 [indexes]
   category = "categories"
@@ -14,5 +25,5 @@ author = "admin"
 [params]
   #search_engine = true
   #google_analytics_id = ""
-  #twitter_username = ""
+  twitter_username = "username"
   #disqus_shortname = ""
