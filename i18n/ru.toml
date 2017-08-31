@@ -11,10 +11,10 @@ other = "Теги"
 other = "Поиск"
 
 [written]
-other = "За авторством"
+other = "Написал"
 
 [newer]
-other = "След."
+other = "Следующая"
 
 [older]
-other = "Пред."
+other = "Предыдущая"

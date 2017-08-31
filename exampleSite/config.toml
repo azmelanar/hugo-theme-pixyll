@@ -21,6 +21,10 @@ weight = 1
 [Languages.ru]
 weight = 2
 
+[blackfriday]
+angledQuotes = true
+hrefTargetBlank = true
+
 [indexes]
   category = "categories"
   tag = "tags"
