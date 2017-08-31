@@ -1,15 +1,15 @@
 <div class="post">
   <a class="post-link" href="{{ .Permalink }}">
   <p class="post-meta left">{{ .Date.Format "Jan 2, 2006" }}</p>
-  <p class="post-author right">Written by {{ .Params.author }}</p>
+  <p class="post-author right">{{ i18n "written" }} {{ .Params.author }}</p>
   <div class="clearfix"></div>
   <h3 class="h2 post-title">{{ .Title }} {{ if .Draft }}(draft){{end}}</h3>
   <p class="post-summary">{{ .Summary }}</p>
   </a>
   {{ $baseurl := .Site.BaseURL }}
-  <p class="post-meta">Tags:&nbsp;
+  <p class="post-meta">{{ i18n "tags" }}:&nbsp;
   {{ range $i, $e := .Params.tags }}
       {{if $i}},&nbsp;{{end}}
-      <a href="{{ $baseurl }}/tags/{{ . }}">{{ . }}</a>
+      <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
   {{ end }}</p>
 </div>

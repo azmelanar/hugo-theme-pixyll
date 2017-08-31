@@ -9,3 +9,12 @@ other = "Теги"
 
 [search]
 other = "Поиск"
+
+[written]
+other = "За авторством"
+
+[newer]
+other = "След."
+
+[older]
+other = "Пред."
