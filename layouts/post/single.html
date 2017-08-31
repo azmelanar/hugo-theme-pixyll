@@ -13,10 +13,10 @@
       {{ .Content }}
       </article>
 
-      <p class="post-meta">Tags:&nbsp;
+      <p class="post-meta">{{ i18n "tags" }}:&nbsp;
         {{ range $i, $e := .Params.tags }}
             {{if $i}},&nbsp;{{end}}
-            <a href="{{ $baseurl }}/tags/{{ . }}">{{ . }}</a>
+            <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
         {{ end }}
       </p>
 
