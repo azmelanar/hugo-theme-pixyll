@@ -30,3 +30,4 @@ weight = 2
   #google_analytics_id = ""
   twitter_username = "username"
   #disqus_shortname = ""
+  paginate = 5

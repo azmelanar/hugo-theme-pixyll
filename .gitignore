@@ -5,3 +5,4 @@ hugo
 public/*
 content/*
 config.*
+exampleSite/public/
