@@ -30,7 +30,7 @@ hrefTargetBlank = true
   tag = "tags"
 
 [params]
-  #search_engine = true
+  search_engine = true
   #google_analytics_id = ""
   twitter_username = "username"
   #disqus_shortname = ""
