@@ -1,9 +1,3 @@
-[about]
-other = "О нас"
-
-[contact]
-other = "Контакты"
-
 [tags]
 other = "Теги"
 
@@ -18,3 +12,9 @@ other = "Следующая"
 
 [older]
 other = "Предыдущая"
+
+[by]
+other = "автор: "
+
+[post_date_format]
+other = "02.01.2006"

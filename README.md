@@ -36,6 +36,11 @@ theme = "pixyll"
   twitter_username = "username"
   disqus_shortname = "sitename"
   paginate = true
+
+[[menu.main]]
+  url = "/about"
+  name = "About"
+  weight = 0
 ```
 
 ## Search

@@ -5,7 +5,7 @@
     <div class="measure">
       <div class="post-header mb2">
         <h1 class="py2">{{ .Title }}</h1>
-        <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}</span><br>
+        <span class="post-meta">{{ .Date.Format (i18n "post_date_format") }}{{ with .Params.author }} {{ i18n "by" }} {{ . }}{{end}}</span><br>
         {{ $baseurl := .Site.BaseURL }}
       </div>
 
@@ -13,12 +13,14 @@
       {{ .Content }}
       </article>
 
-      <p class="post-meta">{{ i18n "tags" }}:&nbsp;
-        {{ range $i, $e := .Params.tags }}
-            {{if $i}},&nbsp;{{end}}
-            <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
-        {{ end }}
-      </p>
+      {{ with .Params.tags }}
+          <p class="post-meta">{{ i18n "tags" }}:&nbsp;
+            {{ range $i, $e := . }}
+                {{if $i}},&nbsp;{{end}}
+                <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
+            {{ end }}
+          </p>
+      {{ end }}
 
       {{ partial "comments.html" . }}
     </div>

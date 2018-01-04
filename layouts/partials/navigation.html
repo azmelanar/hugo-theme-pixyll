@@ -1,6 +1,11 @@
-<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/about/">{{ i18n "about" }}</a>
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+    <a class="nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a>
+{{ end }}
+
+{{ if .Site.Taxonomies.tags }}
 <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/tags/">{{ i18n "tags" }}</a>
-<a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/contact/">{{ i18n "contact" }}</a>
+{{ end }}
 {{- if .Site.IsMultiLingual -}}
 {{- range $lang := .Site.Languages -}}
 {{- if ne $.Site.Language $lang -}}
