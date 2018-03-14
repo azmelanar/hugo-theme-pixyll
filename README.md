@@ -9,9 +9,9 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 - Disqus comments supported.
 - Google Analytics supported.
 - Social links (currently only for twitter).
-- [Formspree](http://formspree.io/) for contanct form.
+- [Formspree](http://formspree.io/) for contact form.
 - Pagination support.
-- Search based on client side javascript.
+- [Search](#search), executes in client side javascript.
 
 Example config:
 
