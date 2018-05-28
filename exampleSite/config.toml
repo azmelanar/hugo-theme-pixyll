@@ -13,6 +13,7 @@ themesDir              = "../.."
 title                  = "Pixyll"
 enableEmoji            = true
 DefaultContentLanguage = "en"
+#disqusShortname        = ""
 
 [Languages]
 [Languages.en]
@@ -33,5 +34,4 @@ hrefTargetBlank = true
   search_engine = true
   #google_analytics_id = ""
   twitter_username = "username"
-  #disqus_shortname = ""
   paginate = 5

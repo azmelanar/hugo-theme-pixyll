@@ -25,6 +25,7 @@ canonifyurls = true
 title = "Pixyll"
 author = "admin"
 theme = "pixyll"
+disqusShortname = "sitename"
 
 [indexes]
   category = "categories"
@@ -34,7 +35,6 @@ theme = "pixyll"
   search_engine = true
   google_analytics_id = "XX-XXXXXXXX-X"
   twitter_username = "username"
-  disqus_shortname = "sitename"
   paginate = true
 ```
 
