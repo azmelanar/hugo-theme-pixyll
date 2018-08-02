@@ -1,6 +1,6 @@
 archetypeDir           = "archetypes"
 author                 = "admin"
-baseUrl                = "/"
+baseUrl                = "http://localhost:1313"
 buildDrafts            = false
 relativeURLs           = true
 canonifyUrls           = true
