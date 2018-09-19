@@ -7,16 +7,18 @@ title = "search"
 
 <div>
 <link rel="stylesheet" type="text/css" href="../tipuesearch/tipuesearch.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 <script type="text/javascript" src="../tipuesearch/tipuesearch_set.js"></script>
 <script type="text/javascript" src="../tipuesearch/tipuesearch.min.js"></script>
+<script type="text/javascript" src="../tipuesearch/tipuesearch_content.js"></script>
 <script>
 $(document).ready(function() {
      $('#tipue_search_input').tipuesearch({
          'mode' : 'json',
          'show': 10,
          'newWindow': true,
-         'contentLocation': '../tipuesearch_content.json'
+         'wholeWords': false
      });
 });
 </script>

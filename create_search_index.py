@@ -1,8 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
+#
+# Script creates search index for Tipue Search 7.0
+# Check http://www.tipue.com/search/help/ for more info
 
-import os
 import json
+import os
 from bs4 import BeautifulSoup
 
 
@@ -22,22 +25,26 @@ def parser(page):
     node = {}
     try:
         node['title'] = soup.title.get_text(' ', strip=True).replace('&nbsp;', ' ').replace('^', '&#94;')
-        node['loc'] = soup.link['href']
+        node['url'] = soup.link['href']
         node['text'] = soup.article.get_text(' ', strip=True).replace('^', '&#94;')
-        tags = ['nonetags']
-        #for a in soup.find("p", id='tags').find_all("a"):
-        #    tags.append(a['href'].split('/')[-1])
+        tags = []
+        for a in soup.find("p", class_="post-meta").find_all("a"):
+            tags.append(a['href'].split('/')[-1])
         node['tags'] = ' '.join(tags)
         return node
-    except:
+    except Exception as e:
+        #print(e)
         return None
 
 
 # Json accumulator
 def jsoner(nodes):
     jdata = {'pages': nodes}
-    with open('public/tipuesearch_content.json', 'w') as f:
-        json.dump(jdata, f)
+    output = json.dumps(jdata)
+    output = 'var tipuesearch = ' + output + ';'
+    # This is hardcoded http://www.tipue.com/search/help/?d=2
+    with open('public/tipuesearch/tipuesearch_content.js', 'w') as f:
+        f.write(output)
 
 
 # Sitemap generation
@@ -48,12 +55,13 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'''
     url = '<url><loc>{0}</loc><changefreq>daily</changefreq><priority>0.5</priority></url>\n'
     for n in nodes:
-        xml = xml + url.format(n['loc'])
+        xml = xml + url.format(n['url'])
     xml = xml + '\n</urlset>'
     with open('public/search/sitemap.xml', 'w') as f:
         f.write(xml)
 
-if os.path.exists('./public'):
+
+if os.path.exists('./public/tipuesearch'):
     pages = walker('.')
     nodes = []
     for p in pages:
