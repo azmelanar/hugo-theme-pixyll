@@ -18,7 +18,7 @@ $(document).ready(function() {
          'mode' : 'json',
          'show': 10,
          'newWindow': true,
-         'contentLocation': '../tipuesearch_content.json'
+         'wholeWords': false
      });
 });
 </script>
