@@ -45,7 +45,7 @@ http://www.tipue.com/search
 }
 #tipue_search_replace, #tipue_search_error, .tipue_search_content_text
 {
-     font: 300 1.25rem "Ubuntu", "PT Serif", Georgia, sans-serif;
+     font: 300 16px/1.6 "Ubuntu", "PT Serif", Georgia, sans-serif;
      color: #333;
      line-height: 1.2em;
 }
@@ -68,7 +68,7 @@ http://www.tipue.com/search
 }
 .tipue_search_content_title
 {
-     font: 300 2.0rem "Ubuntu", "PT Serif", Georgia, sans-serif;
+     font: 300 30px/1.2 "Ubuntu", "PT Serif", Georgia, sans-serif;
      color: #333;
      -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -80,7 +80,7 @@ http://www.tipue.com/search
 }
 .tipue_search_content_url, .tipue_search_content_debug
 {
-     font: 300 1.25rem "Ubuntu", "PT Serif", Georgia, sans-serif;
+     font: 300 15px/1.7 "Ubuntu", "PT Serif", Georgia, sans-serif;
      color: #0096cc;
 }
 .tipue_search_content_url a
