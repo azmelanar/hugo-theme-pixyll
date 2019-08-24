@@ -5,7 +5,7 @@
     <div class="measure">
     <p>Tag: {{ .Title | lower }}</p>
     <ul>
-        {{ range .Data.Pages.ByDate.Reverse }}
+        {{ range .Site.RegularPages.ByDate.Reverse }}
             <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
         {{ end }}
     </ul>

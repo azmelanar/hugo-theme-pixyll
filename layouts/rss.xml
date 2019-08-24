@@ -7,7 +7,7 @@
     {{ with .Site.Author.name }}<author>{{.}}</author>{{end}}
     {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
     <updated>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</updated>
-    {{ range first 15 .Data.Pages }}
+    {{ range first 15 .Site.RegularPages }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
