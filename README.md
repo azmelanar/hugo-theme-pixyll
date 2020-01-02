@@ -36,6 +36,11 @@ disqusShortname = "sitename"
   google_analytics_id = "XX-XXXXXXXX-X"
   twitter_username = "username"
   paginate = true
+
+[[menu.main]]
+  url = "/about"
+  name = "About"
+  weight = 0
 ```
 
 ## Search
