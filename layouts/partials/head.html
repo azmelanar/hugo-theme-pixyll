@@ -25,7 +25,7 @@
   <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato:900,300'> -->
 
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/combined-min.css">
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/tipuesearch/tipuesearch.css">
+  {{ if isset .Site.Params "search_engine" }}<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/tipuesearch/tipuesearch.css">{{ end }}
 
 </head>
 <body class="">
