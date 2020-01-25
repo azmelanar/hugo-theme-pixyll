@@ -13,6 +13,8 @@ Based on [Pixyll for Jekyll](https://github.com/johnotander/pixyll)
 - Pagination support.
 - [Search](#search), executes in client side javascript.
 
+NOTE: Content under `content/posts` is not rendered with this theme! Please move your content to `content/post`. 
+
 Example config:
 
 ```toml
