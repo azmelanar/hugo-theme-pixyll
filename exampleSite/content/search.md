@@ -8,7 +8,7 @@ slug = "search"
 
 <div>
 <link rel="stylesheet" type="text/css" href="../tipuesearch/tipuesearch.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 <script type="text/javascript" src="../tipuesearch/tipuesearch_set.js"></script>
 <script type="text/javascript" src="../tipuesearch/tipuesearch.min.js"></script>
