@@ -6,7 +6,7 @@
 
   <div>
    {{ $baseurl := .Site.BaseURL }}
-   {{ if eq .Permalink "/search/" }}
+   {{ if in .Permalink "/search/" }}
 <link rel="stylesheet" type="text/css" href="{{ $baseurl }}/tipuesearch/tipuesearch.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
