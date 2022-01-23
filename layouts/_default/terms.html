@@ -30,7 +30,7 @@ $(document).ready(function() {
    <h3 id="title">{{ .Title }}</h3>
    {{ $data := .Data }}
     {{ range $key,$value := .Data.Terms.ByCount }}
-    <a href="{{ "/" | absLangURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} <br>
+    <a href="{{ $baseurl }}{{ "/" | relLangURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} <br>
     {{ end }}
     {{ end }}
   </div>
