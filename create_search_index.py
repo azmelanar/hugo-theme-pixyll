@@ -21,7 +21,7 @@ def walker(path):
 
 # Takes html page and outputs json object
 def parser(page):
-    soup = BeautifulSoup(open(page, 'r'))
+    soup = BeautifulSoup(open(page, 'r'), 'html.parser')
     node = {}
     try:
         node['title'] = soup.title.get_text(' ', strip=True).replace('&nbsp;', ' ').replace('^', '&#94;')
@@ -71,4 +71,4 @@ if os.path.exists('./public/tipuesearch'):
     jsoner(nodes)
     sitemaper(nodes)
 else:
-    print 'Error: place this script in hugo site root'
+    print('Error: place this script in hugo site root')
